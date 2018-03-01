@@ -106,6 +106,7 @@ trap 'err_report $LINENO' ERR
 
 environment_setup() {
   log "[1/6] Installing docker and docker-compose"
+  sudo sed -i 's/archive.ubuntu.com/mirrors.tencentyun.com/g' /etc/apt/sources.list
   sudo apt-get -y update
   #install relative packages
   sudo apt-get install -y vim git curl python-pip

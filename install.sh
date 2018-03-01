@@ -118,6 +118,8 @@ old_cleanup() {
 environment_setup() {
   log "[1/6] Installing docker and docker-compose"
 
+  sudo sed -i 's/archive.ubuntu.com/mirrors.tencentyun.com/g' /etc/apt/sources.list
+
   if [[ "$OSTYPE" == "darwin"* ]]; then
     command -v docker ps >/dev/null 2>&1 || { echo "Autolab on OS X requires Docker. Please install it from https://docs.docker.com/engine/installation/mac/ Aborting." >&2; exit 1; }
   else

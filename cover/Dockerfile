@@ -36,6 +36,8 @@ RUN bundle install
 # Add the rails app
 ADD . /home/app/webapp
 
+RUN sed -i 's/archive.ubuntu.com/mirrors.tencentyun.com/g' /etc/apt/sources.list
+
 RUN mkdir -p /home/app/webapp/courses \
     /home/app/webapp/assessmentConfig \
     /home/app/webapp/courseConfig \
@@ -47,7 +49,6 @@ RUN chown -R app:app /home/app/webapp/courses \
     /home/app/webapp/courseConfig \
     /home/app/webapp/gradebooks \
     /home/app/webapp/tmp
-
 
 
 # Move the database configuration into place
