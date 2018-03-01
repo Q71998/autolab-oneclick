@@ -125,7 +125,7 @@ environment_setup() {
     #install relative packages
     sudo apt-get install -y vim git curl python-pip
     #install docker
-    curl -sSL https://get.docker.com/ | sh
+    curl -sSL https://get.daocloud.io/docker | sh
     #install docker-compose
     pip install docker-compose
     log "[1/6] Done"
