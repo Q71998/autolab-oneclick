@@ -56,9 +56,9 @@ RUN chmod +x /usr/local/bin/wrapdocker
 VOLUME /var/lib/docker
 
 # Create virtualenv to link dependancies
-RUN pip install virtualenv && virtualenv .
+RUN pip install -i https://pypi.tuna.tsinghua.edu.cn/simple virtualenv && virtualenv .
 # Install python dependancies
-RUN pip install -r requirements.txt
+RUN pip install -i https://pypi.tuna.tsinghua.edu.cn/simple -r requirements.txt
 
 RUN mkdir -p /var/log/docker /var/log/supervisor
 
