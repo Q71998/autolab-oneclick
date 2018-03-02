@@ -48,7 +48,8 @@ RUN chown -R app:app /home/app/webapp/courses \
     /home/app/webapp/assessmentConfig \
     /home/app/webapp/courseConfig \
     /home/app/webapp/gradebooks \
-    /home/app/webapp/tmp
+    /home/app/webapp/tmp \
+    /home/app/webapp/attachments
 
 
 # Move the database configuration into place
